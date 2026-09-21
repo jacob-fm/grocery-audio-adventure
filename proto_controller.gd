@@ -45,6 +45,9 @@ extends CharacterBody3D
 @export var input_sprint : String = "sprint"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
+@export var input_interact : String = "interact"
+
+signal interaction_attempted
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
@@ -54,9 +57,10 @@ var sprinting : bool = false
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
+@onready var camera: Camera3D = $Head/Camera3D
 @onready var collider: CollisionShape3D = $Collider
-@onready var animation_player = $AnimationPlayer
 
+var highlighted_object: StaticBody3D = null
 
 func _ready() -> void:
 	check_input_mappings()
@@ -80,6 +84,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			enable_freefly()
 		else:
 			disable_freefly()
+
+	if Input.is_action_just_pressed("interact"):
+		interaction_attempted.emit()
 
 func _physics_process(delta: float) -> void:
 	# If freeflying, handle freefly and nothing else
@@ -115,18 +122,59 @@ func _physics_process(delta: float) -> void:
 		if move_dir:
 			velocity.x = move_dir.x * move_speed
 			velocity.z = move_dir.z * move_speed
-			play_anims()
 		else:
 			velocity.x = move_toward(velocity.x, 0, move_speed)
 			velocity.z = move_toward(velocity.z, 0, move_speed)
-			animation_player.pause()
 	else:
 		velocity.x = 0
 		velocity.y = 0
-		animation_player.pause()
 
 	# Use velocity to actually move
 	move_and_slide()
+
+	update_raycast()
+
+func update_raycast():
+	# Get the center of the screen
+	var screen_center = get_viewport().get_visible_rect().size / 2.0
+
+	# Create a ray starting at the camera and going through
+	# the center of the screen
+	var ray_origin = camera.project_ray_origin(screen_center)
+	var ray_direction = camera.project_ray_normal(screen_center)
+	var ray_end = ray_origin + ray_direction * 1000.0
+
+	# Create the physics raycast
+	var query = PhysicsRayQueryParameters3D.create(
+		ray_origin,
+		ray_end
+	)
+
+	# Perform the raycast
+	var result = get_world_3d().direct_space_state.intersect_ray(query)
+
+	# Figure out what we're currently looking at
+	var new_object: StaticBody3D = null
+
+	if result:
+		var detected_collider = result["collider"]
+
+		if detected_collider.has_method("set_highlighted"):
+			new_object = detected_collider
+
+	# Nothing changed, so don't do anything
+	if new_object == highlighted_object:
+		return
+
+	# Remove highlight from the previous object
+	if highlighted_object:
+		highlighted_object.set_highlighted(false)
+
+	# Highlight the new object
+	if new_object:
+		new_object.set_highlighted(true)
+
+	highlighted_object = new_object
 
 
 ## Rotate us to look around.
@@ -160,15 +208,6 @@ func capture_mouse():
 func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
-
-func play_anims():
-	if is_on_floor():
-		if sprinting:
-			animation_player.play("scurry")
-		else:
-			animation_player.play("walk")
-	else:
-		animation_player.pause()
 
 
 ## Checks if some Input Actions haven't been created.

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://u8chcgnjem3u"]
 
-[ext_resource type="PackedScene" uid="uid://dfyh8pu4xrpqu" path="res://grey_box.glb" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://blx144o6pgwtt" path="res://proto_controller.gd" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://be5vlwgoxwg7b" path="res://scannable_item.tscn" id="2_h2yge"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7tw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,6 +17,12 @@ glow_enabled = true
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mkmk0"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mkmk0"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mkmk0"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gbx3w"]
+
 [node name="Node3D" type="Node3D" unique_id=1223662055]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=18547669]
@@ -25,11 +32,32 @@ environment = SubResource("Environment_h2yge")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="grey_box" parent="." unique_id=1281170434 instance=ExtResource("1_ig7tw")]
-
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=712404988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1612349, 0)
+script = ExtResource("2_0xm2m")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1258944432]
+[node name="Collider" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1258944432]
 shape = SubResource("CapsuleShape3D_mkmk0")
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=2069328521]
+[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=665429807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5231956, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=2069328521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5231956, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=327646562]
+mesh = SubResource("CapsuleMesh_mkmk0")
+
+[node name="floor" type="MeshInstance3D" parent="." unique_id=469661559]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
+mesh = SubResource("PlaneMesh_mkmk0")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor" unique_id=107894092]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D" unique_id=396348]
+shape = SubResource("WorldBoundaryShape3D_gbx3w")
+
+[node name="scannableItem" parent="." unique_id=31529065 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.434387, 1.2124176, 0)
+
+[connection signal="interaction_attempted" from="CharacterBody3D" to="scannableItem" method="_on_character_body_3d_interaction_attempted"]
