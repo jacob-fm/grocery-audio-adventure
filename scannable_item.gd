@@ -1,6 +1,7 @@
 extends StaticBody3D
 
 var highlight_material: StandardMaterial3D
+var currently_highlighted: bool = false
 
 @onready var audio: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
@@ -15,10 +16,12 @@ func set_highlighted(highlighted: bool):
 	var mesh = $MeshInstance3D
 
 	if highlighted:
+		currently_highlighted = true
 		mesh.material_overlay = highlight_material
 	else:
+		currently_highlighted = false
 		mesh.material_overlay = null
 
 func _on_character_body_3d_interaction_attempted():
-	audio.play()
-	print("attempted to play!")
+	if currently_highlighted:
+		audio.play()
