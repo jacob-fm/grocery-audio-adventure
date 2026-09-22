@@ -1,0 +1,191 @@
+[gd_scene format=3 uid="uid://0mebbvhn7r5v"]
+
+[ext_resource type="PackedScene" uid="uid://ko0xqofbunfg" path="res://grocery_items/grocery_new_attempt.glb" id="1_u78js"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b4p0q"]
+size = Vector3(20.021484, 795.02014, 260.41632)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkmk0"]
+size = Vector3(91.73659, 56.03534, 66.359375)
+
+[node name="grocery_new_attempt" unique_id=698302579 instance=ExtResource("1_u78js")]
+
+[node name="AreaLight3D" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="0" unique_id=863716254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1668.3456, 1052.161, 215.96558)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D2" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="1" unique_id=953680433]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1809.9073, 1052.161, 215.96558)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D3" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="2" unique_id=199106130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1497.5258, 1052.161, 215.96558)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D4" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="3" unique_id=2083161170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1325.8192, 1052.161, 215.96558)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D5" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="4" unique_id=725555546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1170.6627, 1052.161, 215.96558)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D11" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="5" unique_id=2031891082]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1668.3456, 899.734, 215.96559)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D12" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="6" unique_id=1455830526]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1809.9073, 899.734, 215.96559)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D13" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="7" unique_id=1588418734]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1497.5258, 899.734, 215.96559)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D14" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="8" unique_id=465618913]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1325.8192, 899.734, 215.96559)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D15" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="9" unique_id=779471209]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1170.6626, 899.734, 215.96559)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D16" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="10" unique_id=950217907]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1668.3456, 1214.1956, 215.9658)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D17" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="11" unique_id=1821303601]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1809.9073, 1214.1956, 215.9658)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D18" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="12" unique_id=60344926]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1497.5258, 1214.1956, 215.9658)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D19" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="13" unique_id=349495980]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1325.8192, 1214.1956, 215.9658)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D20" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="14" unique_id=512231414]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1170.6626, 1214.1956, 215.9658)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D6" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="15" unique_id=816751939]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1668.3456, 1371.068, 215.96565)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D7" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="16" unique_id=1953273215]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1809.9073, 1371.068, 215.96565)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D8" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="17" unique_id=1110599094]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1497.5258, 1371.068, 215.96565)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D9" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="18" unique_id=1199593383]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1325.8192, 1371.068, 215.96565)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="AreaLight3D10" type="AreaLight3D" parent="Sketchfab_model/USDRoot/scene/Material2_063" parent_id_path=PackedInt32Array(1822273879) index="19" unique_id=1138804213]
+transform = Transform3D(63.671993, 0, 0, 0, 63.67201, 0, 0, 0, 63.67201, 1170.6626, 1371.068, 215.96565)
+light_energy = 0.593
+area_range = 3.204
+area_attenuation = -0.152
+area_size = Vector2(0.3326559, 1.1906581)
+
+[node name="Material2_453" parent="Sketchfab_model/USDRoot/scene" parent_id_path=PackedInt32Array(1766988242) index="1330" unique_id=1005425024]
+visible = false
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/USDRoot/scene/Material3_008" parent_id_path=PackedInt32Array(335134484) index="0" unique_id=2066746306]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/USDRoot/scene/Material3_008/StaticBody3D" index="0" unique_id=1836336942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1076.3569, 1128.6506, 129.70859)
+shape = SubResource("BoxShape3D_b4p0q")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Sketchfab_model/USDRoot/scene/Material3_008/StaticBody3D" index="1" unique_id=2049695391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1891.9958, 1128.6506, 129.70859)
+shape = SubResource("BoxShape3D_b4p0q")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sketchfab_model/USDRoot/scene/Material3_008/StaticBody3D" index="2" unique_id=369439437]
+transform = Transform3D(-4.371139e-08, 1, 4.7683716e-07, -1, -4.371116e-08, -4.7683716e-07, -4.7683716e-07, -4.7683716e-07, 1, 1482.8108, 1493.1259, 129.70871)
+shape = SubResource("BoxShape3D_b4p0q")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Sketchfab_model/USDRoot/scene/Material3_008/StaticBody3D" index="3" unique_id=1096111314]
+transform = Transform3D(-4.371139e-08, 1, 4.7683716e-07, -1, -4.371116e-08, -4.7683716e-07, -4.7683716e-07, -4.7683716e-07, 1, 1482.8108, 766.592, 129.70834)
+shape = SubResource("BoxShape3D_b4p0q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_model/USDRoot/scene/Material3_016" parent_id_path=PackedInt32Array(2084740126) index="0" unique_id=934699874]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1483.9751, 1195.9556, 0.00057027605)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/USDRoot/scene/Material3_016/StaticBody3D" index="0" unique_id=1089226737]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 106.03711, 179.90817, 36.13632)
+shape = SubResource("BoxShape3D_mkmk0")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Sketchfab_model/USDRoot/scene/Material3_016/StaticBody3D" index="1" unique_id=1173248522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 260.78018, 179.90817, 36.13632)
+shape = SubResource("BoxShape3D_mkmk0")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Sketchfab_model/USDRoot/scene/Material3_016/StaticBody3D" index="2" unique_id=1594954609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.431156, 179.90817, 36.13632)
+shape = SubResource("BoxShape3D_mkmk0")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Sketchfab_model/USDRoot/scene/Material3_016/StaticBody3D" index="3" unique_id=137260084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -201.495, 179.90817, 36.13632)
+shape = SubResource("BoxShape3D_mkmk0")

@@ -59,6 +59,7 @@ var sprinting : bool = false
 @onready var collider: CollisionShape3D = $Collider
 
 var highlighted_object: StaticBody3D = null
+var currently_playing: StaticBody3D = null
 
 func _ready() -> void:
 	check_input_mappings()
@@ -85,7 +86,10 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	if Input.is_action_just_pressed("interact"):
 		if highlighted_object:
+			if currently_playing and currently_playing != highlighted_object:
+				currently_playing.stop_audio()
 			highlighted_object.play_audio()
+			currently_playing = highlighted_object
 
 func _physics_process(delta: float) -> void:
 	# If freeflying, handle freefly and nothing else

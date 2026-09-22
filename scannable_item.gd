@@ -29,6 +29,7 @@ func set_highlighted(highlighted: bool):
 
 func play_audio():
 	if currently_highlighted:
-		print("INTERACTED WITH: ", name)
-		print("Audio stream: ", audio_player.stream)
 		audio_player.play()
+
+func stop_audio():
+	audio_player.stop()

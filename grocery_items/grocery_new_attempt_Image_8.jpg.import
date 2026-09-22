@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct5moarlnixn"
-path.s3tc="res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.s3tc.ctex"
-path.etc2="res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.etc2.ctex"
+uid="uid://q4364j7ot355"
+path.s3tc="res://.godot/imported/grocery_new_attempt_Image_8.jpg-1226c72f1928b64021c5ce3ed4320566.s3tc.ctex"
+path.etc2="res://.godot/imported/grocery_new_attempt_Image_8.jpg-1226c72f1928b64021c5ce3ed4320566.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e31b7dcdddbe87c27b5d47e411f1a466"
+"md5": "dd02a86bac543e23088d75e7d85029f2"
 }
 
 [deps]
 
-source_file="res://large_box_Image_0.png"
-dest_files=["res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.s3tc.ctex", "res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.etc2.ctex"]
+source_file="res://grocery_items/grocery_new_attempt_Image_8.jpg"
+dest_files=["res://.godot/imported/grocery_new_attempt_Image_8.jpg-1226c72f1928b64021c5ce3ed4320566.s3tc.ctex", "res://.godot/imported/grocery_new_attempt_Image_8.jpg-1226c72f1928b64021c5ce3ed4320566.etc2.ctex"]
 
 [params]
 

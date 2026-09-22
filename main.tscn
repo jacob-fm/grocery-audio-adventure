@@ -2,8 +2,17 @@
 
 [ext_resource type="Script" uid="uid://blx144o6pgwtt" path="res://proto_controller.gd" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://be5vlwgoxwg7b" path="res://scannable_item.tscn" id="2_h2yge"]
-[ext_resource type="AudioStream" uid="uid://c8jwynm306trh" path="res://apple.wav" id="3_1bvp3"]
-[ext_resource type="AudioStream" uid="uid://c3tm81g1d3s5k" path="res://cereal.wav" id="4_lquwl"]
+[ext_resource type="AudioStream" uid="uid://c8jwynm306trh" path="res://sounds/apple.wav" id="3_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://c3tm81g1d3s5k" path="res://sounds/cereal.wav" id="4_lquwl"]
+[ext_resource type="PackedScene" uid="uid://0mebbvhn7r5v" path="res://grocery_items/new_super_market.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://jwen24iv8e4p" path="res://grocery_items/desk_2.tscn" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://ihmblnwb4kmr" path="res://sounds/Cookies.mp3" id="7_ycdy4"]
+[ext_resource type="AudioStream" uid="uid://bk3i14htap0uw" path="res://sounds/Cucumbers.mp3" id="8_w48qg"]
+[ext_resource type="AudioStream" uid="uid://r7pfu4010i37" path="res://sounds/Eggs.mp3" id="9_vivmo"]
+[ext_resource type="AudioStream" uid="uid://cjtykg5ouofh1" path="res://sounds/coffee.wav" id="10_2cqfq"]
+[ext_resource type="AudioStream" uid="uid://bpvaukdtscogr" path="res://sounds/milk.wav" id="11_yaehf"]
+[ext_resource type="AudioStream" uid="uid://djyxgbeo3bhba" path="res://sounds/salt.wav" id="12_074og"]
+[ext_resource type="AudioStream" uid="uid://8k8ht5kpa4ti" path="res://sounds/Soda.mp3" id="13_cegan"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7tw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,7 +30,8 @@ glow_enabled = true
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mkmk0"]
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gbx3w"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
+size = Vector3(0.34643555, 0.010620117, 0.33496094)
 
 [node name="Node3D" type="Node3D" unique_id=1223662055]
 
@@ -29,11 +39,11 @@ glow_enabled = true
 environment = SubResource("Environment_h2yge")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=168479480]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -1.8231988, 1.3708861, -2.2733784)
 shadow_enabled = true
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=712404988]
-transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 7.735738, 1.0828695, 10.049821)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.0784328, 0.6820072, 4.5620804)
 script = ExtResource("2_0xm2m")
 
 [node name="Collider" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1258944432]
@@ -46,6 +56,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5231956, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5231956, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=327646562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6680384, 0)
 mesh = SubResource("CapsuleMesh_mkmk0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1159626824]
@@ -70,10 +81,8 @@ vertical_alignment = 1
 transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=543830126]
-shape = SubResource("WorldBoundaryShape3D_gbx3w")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=824410303]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8577955, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0008544922, -0.0047783214, 0.0013387859)
+shape = SubResource("BoxShape3D_lquwl")
 
 [node name="scannableItem" parent="." unique_id=1508037630 instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.597001, 0.5, 21.933678)
@@ -82,3 +91,62 @@ audio_stream = ExtResource("3_1bvp3")
 [node name="scannableItem2" parent="." unique_id=1009894996 instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7773361, 0.5, 8.791108)
 audio_stream = ExtResource("4_lquwl")
+
+[node name="grocery_new_attempt" parent="." unique_id=698302579 instance=ExtResource("5_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.009598732, -0.004192829, 0.0014762878)
+
+[node name="desk2" parent="." unique_id=1443256586 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5062323, 0, -1.9317524)
+
+[node name="desk3" parent="." unique_id=2094594446 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.31895602, 0, -1.9317524)
+
+[node name="desk4" parent="." unique_id=540944594 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.7177854, 0, -1.9317524)
+
+[node name="scannableItem3" parent="." unique_id=36677642 instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, -3.8122222, 1.1990182, -2.2418752)
+audio_stream = ExtResource("7_ycdy4")
+
+[node name="scannableItem4" parent="." unique_id=199422552 instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, 0.08168435, 1.1990182, -2.2418752)
+audio_stream = ExtResource("8_w48qg")
+
+[node name="scannableItem5" parent="." unique_id=1887174121 instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, 3.4522717, 1.1990182, -2.2418752)
+audio_stream = ExtResource("9_vivmo")
+
+[node name="desk5" parent="." unique_id=1983890670 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5062323, 0, 0.3951106)
+
+[node name="desk6" parent="." unique_id=1869493652 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.31895602, 0, 0.3951106)
+
+[node name="desk7" parent="." unique_id=118747019 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.7177854, 0, 0.3951106)
+
+[node name="scannableItem6" parent="." unique_id=116292313 instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, -3.8122222, 1.1990182, 0.08498788)
+audio_stream = ExtResource("10_2cqfq")
+
+[node name="scannableItem7" parent="." unique_id=1113092078 instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, 0.08168435, 1.1990182, 0.08498788)
+audio_stream = ExtResource("11_yaehf")
+
+[node name="scannableItem8" parent="." unique_id=1908715648 instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, 3.4522717, 1.1990182, 0.08498788)
+audio_stream = ExtResource("12_074og")
+
+[node name="desk9" parent="." unique_id=662215857 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.7177854, 0, 2.8458428)
+
+[node name="scannableItem10" parent="." unique_id=9757176 instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, 3.4522717, 1.1990182, 2.53572)
+audio_stream = ExtResource("3_1bvp3")
+
+[node name="desk8" parent="." unique_id=1861322054 instance=ExtResource("6_7mycd")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.5062323, 0, 3.0149925)
+
+[node name="scannableItem9" parent="." unique_id=2129155630 instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.71, 0, 0, 0, 0.71, 0, 0, 0, 0.71, -3.8122222, 1.1990182, 2.7048697)
+audio_stream = ExtResource("13_cegan")

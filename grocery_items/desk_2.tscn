@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://jwen24iv8e4p"]
+
+[ext_resource type="PackedScene" uid="uid://3sdsuco8fury" path="res://grocery_items/desk2.glb" id="1_5xfuu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mkmk0"]
+size = Vector3(1.0001221, 0.8540039, 1.7369232)
+
+[node name="desk2" unique_id=1443256586 instance=ExtResource("1_5xfuu")]
+
+[node name="Counter_Palette_0" parent="." index="0" unique_id=198589613]
+transform = Transform3D(0.01, 0, 0, 0, 0.010000002, 0, 0, 0, 0.010000002, -0.23965125, 0.618666, 0.2887702)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=516838720]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=866273508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2597046, 0.4359058, 0.29097748)
+shape = SubResource("BoxShape3D_mkmk0")

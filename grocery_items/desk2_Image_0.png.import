@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct5moarlnixn"
-path.s3tc="res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.s3tc.ctex"
-path.etc2="res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.etc2.ctex"
+uid="uid://b514bqn3vgdkj"
+path.s3tc="res://.godot/imported/desk2_Image_0.png-2622c757c83c5df7fd781d7e0a675456.s3tc.ctex"
+path.etc2="res://.godot/imported/desk2_Image_0.png-2622c757c83c5df7fd781d7e0a675456.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -15,8 +15,8 @@ generator_parameters={
 
 [deps]
 
-source_file="res://large_box_Image_0.png"
-dest_files=["res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.s3tc.ctex", "res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.etc2.ctex"]
+source_file="res://grocery_items/desk2_Image_0.png"
+dest_files=["res://.godot/imported/desk2_Image_0.png-2622c757c83c5df7fd781d7e0a675456.s3tc.ctex", "res://.godot/imported/desk2_Image_0.png-2622c757c83c5df7fd781d7e0a675456.etc2.ctex"]
 
 [params]
 

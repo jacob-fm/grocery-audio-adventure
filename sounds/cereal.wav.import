@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c3tm81g1d3s5k"
-path="res://.godot/imported/cereal.wav-cd592b6de197d82451a9bb29dced43bb.sample"
+path="res://.godot/imported/cereal.wav-25bf8f2c3d45511cd30bb8d7511cbb8e.sample"
 
 [deps]
 
-source_file="res://cereal.wav"
-dest_files=["res://.godot/imported/cereal.wav-cd592b6de197d82451a9bb29dced43bb.sample"]
+source_file="res://sounds/cereal.wav"
+dest_files=["res://.godot/imported/cereal.wav-25bf8f2c3d45511cd30bb8d7511cbb8e.sample"]
 
 [params]
 

@@ -2,21 +2,21 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct5moarlnixn"
-path.s3tc="res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.s3tc.ctex"
-path.etc2="res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.etc2.ctex"
+uid="uid://c5df66to5pmuw"
+path.s3tc="res://.godot/imported/SuperMarket2_Image_34.jpg-32df165a85c3ea4201af8a5ce0f661d9.s3tc.ctex"
+path.etc2="res://.godot/imported/SuperMarket2_Image_34.jpg-32df165a85c3ea4201af8a5ce0f661d9.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e31b7dcdddbe87c27b5d47e411f1a466"
+"md5": "f2e471e76dfe6222587face47652cdf9"
 }
 
 [deps]
 
-source_file="res://large_box_Image_0.png"
-dest_files=["res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.s3tc.ctex", "res://.godot/imported/large_box_Image_0.png-ef5d03c725a4204a849e5b4830e6413d.etc2.ctex"]
+source_file="res://grocery_items/SuperMarket2_Image_34.jpg"
+dest_files=["res://.godot/imported/SuperMarket2_Image_34.jpg-32df165a85c3ea4201af8a5ce0f661d9.s3tc.ctex", "res://.godot/imported/SuperMarket2_Image_34.jpg-32df165a85c3ea4201af8a5ce0f661d9.etc2.ctex"]
 
 [params]
 

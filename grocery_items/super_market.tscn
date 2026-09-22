@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c6yo8knsy5twu"]
+
+[ext_resource type="PackedScene" uid="uid://cklbixou6ahmg" path="res://grocery_items/SuperMarket2.glb" id="1_ol8f8"]
+
+[node name="SuperMarket2" unique_id=483025887 instance=ExtResource("1_ol8f8")]
+
+[node name="Sketchfab_model" parent="." index="0" unique_id=1741867960]
+transform = Transform3D(1, 0, 0, 0, -3.5762787e-07, 0.99999994, 0, -0.99999994, -3.5762787e-07, 0, 0, 0)
