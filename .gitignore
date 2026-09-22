@@ -3,3 +3,11 @@
 /android/
 */.DS_Store
 .DS_Store
+
+# Godot export output — distribute via GitHub Releases, not git
+/Releases/
+*.exe
+*.dmg
+*.pck
+*.apk
+*.aab
