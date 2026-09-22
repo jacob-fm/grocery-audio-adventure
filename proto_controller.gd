@@ -47,8 +47,6 @@ extends CharacterBody3D
 @export var input_freefly : String = "freefly"
 @export var input_interact : String = "interact"
 
-signal interaction_attempted
-
 var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
@@ -86,7 +84,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 	if Input.is_action_just_pressed("interact"):
-		interaction_attempted.emit()
+		if highlighted_object:
+			highlighted_object.play_audio()
 
 func _physics_process(delta: float) -> void:
 	# If freeflying, handle freefly and nothing else

@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://blx144o6pgwtt" path="res://proto_controller.gd" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://be5vlwgoxwg7b" path="res://scannable_item.tscn" id="2_h2yge"]
+[ext_resource type="AudioStream" uid="uid://c8jwynm306trh" path="res://apple.wav" id="3_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://c3tm81g1d3s5k" path="res://cereal.wav" id="4_lquwl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ig7tw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -59,6 +61,11 @@ shape = SubResource("WorldBoundaryShape3D_gbx3w")
 
 [node name="scannableItem" parent="." unique_id=31529065 instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.434387, 1.2124176, 0)
+audio_stream = ExtResource("4_lquwl")
+
+[node name="scannableItem2" parent="." unique_id=1508037630 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7885742, 2.6846924, -13.074829)
+audio_stream = ExtResource("3_1bvp3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1159626824]
 
@@ -77,5 +84,3 @@ grow_vertical = 2
 text = "+"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[connection signal="interaction_attempted" from="CharacterBody3D" to="scannableItem" method="_on_character_body_3d_interaction_attempted"]

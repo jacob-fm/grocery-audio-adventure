@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c8jwynm306trh"
-path="res://.godot/imported/20281__koops__apple_crunch_18.wav-f1761ae8fe24dfa2a439494b5a8dc5ed.sample"
+path="res://.godot/imported/apple.wav-9c77ff12d3398fd3e473f8340de0a90c.sample"
 
 [deps]
 
-source_file="res://20281__koops__apple_crunch_18.wav"
-dest_files=["res://.godot/imported/20281__koops__apple_crunch_18.wav-f1761ae8fe24dfa2a439494b5a8dc5ed.sample"]
+source_file="res://apple.wav"
+dest_files=["res://.godot/imported/apple.wav-9c77ff12d3398fd3e473f8340de0a90c.sample"]
 
 [params]
 
