@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://m33tcegkxkco"]
+
+[ext_resource type="PackedScene" uid="uid://dadei73sc2pb1" path="res://large_box.glb" id="1_e87ph"]
+
+[node name="large_box" unique_id=1832021345 instance=ExtResource("1_e87ph")]
+
+[node name="Box_Closed_Palette_0" parent="." index="0" unique_id=823111386]
+transform = Transform3D(0.01, 0, 0, 0, 0.010000002, 0, 0, 0, 0.010000002, 0, 0, 0)

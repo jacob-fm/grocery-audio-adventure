@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://be5vlwgoxwg7b"]
 
 [ext_resource type="Script" uid="uid://bqh1h2lbh7174" path="res://scannable_item.gd" id="1_vfnqi"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_mkmk0"]
+[ext_resource type="PackedScene" uid="uid://m33tcegkxkco" path="res://grocery_items/large_box.tscn" id="2_vfnqi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mkmk0"]
 
@@ -10,10 +9,10 @@
 script = ExtResource("1_vfnqi")
 highlight_color = Color(1, 0, 0, 1)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2030034268]
-mesh = SubResource("BoxMesh_mkmk0")
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1711449573]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=889687515]
 shape = SubResource("BoxShape3D_mkmk0")
+
+[node name="large_box" parent="." unique_id=1832021345 instance=ExtResource("2_vfnqi")]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0.046813965, 0)

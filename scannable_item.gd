@@ -18,7 +18,7 @@ func _ready():
 	audio_player.stream = audio_stream
 
 func set_highlighted(highlighted: bool):
-	var mesh = $MeshInstance3D
+	var mesh = $large_box/Box_Closed_Palette_0
 
 	if highlighted:
 		currently_highlighted = true

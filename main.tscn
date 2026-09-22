@@ -21,8 +21,6 @@ glow_enabled = true
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mkmk0"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_mkmk0"]
-
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_gbx3w"]
 
 [node name="Node3D" type="Node3D" unique_id=1223662055]
@@ -35,7 +33,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=712404988]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1612349, 0)
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, 7.735738, 1.0828695, 10.049821)
 script = ExtResource("2_0xm2m")
 
 [node name="Collider" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1258944432]
@@ -49,23 +47,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5231956, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=327646562]
 mesh = SubResource("CapsuleMesh_mkmk0")
-
-[node name="floor" type="MeshInstance3D" parent="." unique_id=469661559]
-transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
-mesh = SubResource("PlaneMesh_mkmk0")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="floor" unique_id=107894092]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D" unique_id=396348]
-shape = SubResource("WorldBoundaryShape3D_gbx3w")
-
-[node name="scannableItem" parent="." unique_id=31529065 instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.434387, 1.2124176, 0)
-audio_stream = ExtResource("4_lquwl")
-
-[node name="scannableItem2" parent="." unique_id=1508037630 instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7885742, 2.6846924, -13.074829)
-audio_stream = ExtResource("3_1bvp3")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1159626824]
 
@@ -84,3 +65,20 @@ grow_vertical = 2
 text = "+"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="floor" type="StaticBody3D" parent="." unique_id=884754224]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" unique_id=543830126]
+shape = SubResource("WorldBoundaryShape3D_gbx3w")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=824410303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8577955, 0)
+
+[node name="scannableItem" parent="." unique_id=1508037630 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.597001, 0.5, 21.933678)
+audio_stream = ExtResource("3_1bvp3")
+
+[node name="scannableItem2" parent="." unique_id=1009894996 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7773361, 0.5, 8.791108)
+audio_stream = ExtResource("4_lquwl")
